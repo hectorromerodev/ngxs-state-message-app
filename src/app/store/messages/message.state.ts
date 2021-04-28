@@ -9,6 +9,7 @@ import { AddMessage, RemoveMessage } from './message.actions';
   }
 })
 export class MessagesState {
+
   @Selector()
   static getMessages(state: MessagesStateModel): Message[] {
     return state.messages;
@@ -30,4 +31,5 @@ export class MessagesState {
       messages: getState().messages.filter(message => message.id !== payload)
     });
   }
+
 }
