@@ -9,7 +9,7 @@ import { v4 as uuidv4 } from 'uuid';
   styleUrls: ['./create-message.component.scss']
 })
 export class CreateMessageComponent implements OnInit {
-  public text: string = '';
+  public text = '';
   constructor(
     private store: Store
   ) { }
@@ -17,7 +17,7 @@ export class CreateMessageComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  public addMessage() {
+  public addMessage(): void {
     this.store.dispatch(new AddMessage({ id: uuidv4(), text: this.text }));
     this.text = '';
   }

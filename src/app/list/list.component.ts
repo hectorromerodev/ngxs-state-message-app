@@ -21,8 +21,8 @@ export class ListComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  public removeMessage(id: string) {
-    this.store.dispatch(new RemoveMessage(id))
+  public removeMessage(id: string): void {
+    this.store.dispatch(new RemoveMessage(id));
   }
 
 }
